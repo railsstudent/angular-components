@@ -1,2 +1,17 @@
-// TODO: create the directive for the blog component
-// don't forget to include the template and styles and controller
+import './blog.styl';
+// raw loader of webpack config load the html template in js file
+import template from './blog.html';
+import {BlogController as controller} from './blog.controller';
+
+const blogDirective = () => {
+  return {
+    template,
+    controller,
+    controllerAs : 'vm',
+    restrict: 'E',
+    scope: {},
+    replace: true
+  }
+};
+
+export {blogDirective};
