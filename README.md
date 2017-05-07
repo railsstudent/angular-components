@@ -7,3 +7,5 @@ To get on the correct branch use this command, replacing BRANCH with the branch 
 ```
 git checkout -b BRANCH origin/BRANCH
 ```
+
+Slides can be found here: http://fem-ng6.netlify.com/
