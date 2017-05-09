@@ -20,8 +20,11 @@ import ngAnimate from 'angular-animate';
 // we must import it with the brackets
 import {home} from './components/home/home';
 import {blog} from './components/blog/blog';
-// TODO: register common with app
-// TODO: register shared with app
+import { common } from './components/common/common';
+import { shared } from './shared/shared';
+
+// console.log(shared);
+// console.log(common);
 
 angular.module('app', [
   uiRouter,
@@ -32,6 +35,8 @@ angular.module('app', [
   // property who's value is the name you set the
   // module to be
   home.name,
-  blog.name
+  blog.name,
+  common.name,
+  shared.name
 ])
 .directive('app', appDirective);
