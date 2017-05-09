@@ -6,8 +6,8 @@ export class BlogController {
     this.search = '';
       
     Posts.retrieve()
-    .then((response) => {
-      this.posts = response && response.data || [];
+    .then(() => {
+      this.posts = Posts.getPosts();
     })
     .catch((e) => {
       this.posts = [];
