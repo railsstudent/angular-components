@@ -1,8 +1,9 @@
-// TODO: include the directive
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+import { blogPostDirective } from './blogPost.directive';
+import { shared } from '../../shared/shared';
 
-const blogPost = angular.module('blogPost', [uiRouter])
+const blogPost = angular.module('blogPost', [uiRouter, shared.name])
   .config(function($stateProvider) {
     $stateProvider.state('blogPost', {
       url: '/blog/:title',
@@ -23,4 +24,6 @@ const blogPost = angular.module('blogPost', [uiRouter])
       }
     });
   })
-  .directive('blogPost' /* TODO: register the directive here*/)
+  .directive('blogPost', blogPostDirective);
+  
+  export { blogPost };

@@ -16,3 +16,5 @@ const blogPostDirective = () => {
     replace: true
   };
 };
+
+export { blogPostDirective };
