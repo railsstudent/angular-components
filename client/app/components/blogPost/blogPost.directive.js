@@ -13,7 +13,8 @@ const blogPostDirective = () => {
       post: '='
     },
     restrict: 'E',
-    replace: true
+    replace: true,
+    bindToController: true
   };
 };
 

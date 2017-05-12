@@ -19,9 +19,14 @@ const blogPost = angular.module('blogPost', [uiRouter, shared.name])
           // slug generation should def be a server
           // thing but we don't have one :)
           title = title.replace(/\-+/g, ' ');
-          return Posts.getOne({title});
+          return  Posts.getOne({title});
         }
-      }
+      },
+      controller: function($scope, post) {
+          console.log({post: post});
+          $scope.post = post;
+      },
+      controllerAs: 'vm'
     });
   })
   .directive('blogPost', blogPostDirective);
