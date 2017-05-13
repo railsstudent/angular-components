@@ -111,6 +111,20 @@
       "title": "hey hey",
       "id": 1,
       "createdAt": "Sat May 13 2017 08:22:58 GMT+0800 (HKT)"
+    },
+    {
+      "author": "You",
+      "text": "hello world",
+      "title": "hello world",
+      "id": 2,
+      "createdAt": "Sat May 13 2017 08:36:32 GMT+0800 (HKT)"
+    },
+    {
+      "author": "You",
+      "text": "Just completed Week 7.\nTest cases cannot run.\nNot sure why?????",
+      "title": "Angular 2 workshop",
+      "id": 3,
+      "createdAt": "Sat May 13 2017 08:37:07 GMT+0800 (HKT)"
     }
   ]
 }
