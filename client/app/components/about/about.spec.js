@@ -1,17 +1,17 @@
-import {<%= name %>} from './<%= name %>'
-import {<%= upCaseName %>Controller} from './<%= name %>.controller';
-import {<%= name %>Directive} from './<%= name %>.directive';
-import template from './<%= name %>.html';
+import {about} from './about'
+import {AboutController} from './about.controller';
+import {aboutDirective} from './about.directive';
+import template from './about.html';
 
-describe('<%= upCaseName %>', ()=>{
+describe('About', ()=>{
   let $rootScope,
   makeController;
 
-  beforeEach(window.module(<%= name %>.name));
+  beforeEach(window.module(about.name));
   beforeEach(inject((_$rootScope_)=>{
     $rootScope = _$rootScope_;
     makeController = ()=>{
-      return new <%= upCaseName %>Controller();
+      return new AboutController();
     };
   }));
 
@@ -44,7 +44,7 @@ describe('<%= upCaseName %>', ()=>{
 
   describe('Directive', ()=>{
       // test the component/directive itself
-      let directive = <%= name %>Directive();
+      let directive = aboutDirective();
 
       it('should use the right template',()=>{
         expect(directive.template).to.equal(template);
@@ -55,7 +55,7 @@ describe('<%= upCaseName %>', ()=>{
       });
 
       it('should use the right controller', ()=>{
-        expect(directive.controller).to.equal(<%= upCaseName %>Controller);
+        expect(directive.controller).to.equal(AboutController);
       });
   });
 });
